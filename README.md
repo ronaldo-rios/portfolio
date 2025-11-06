@@ -1,2 +1,2 @@
 # Ronaldo Rios
-ROnaldo Rios Business landing page
+Ronaldo Rios Business landing page

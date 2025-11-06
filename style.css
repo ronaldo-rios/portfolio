@@ -153,41 +153,41 @@ button:hover {
     padding: 0 2.5rem;
 }
 
-.services {
+.journey__container {
     padding: 4rem 3rem;
     text-align: center;
 }
 
-.services h2 {
+.journey__container h2 {
     font-size: 2rem;
 }
 
-.services a button {
+.journey__container a button {
     margin: 1.5rem 0;
     padding: 0.7rem 2.5rem;
     font-size: 1.2em;
     font-weight: 600;
 }
 
-.services__cards {
+.journey__cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     padding: 2rem;
 }
 
-.services__cards div {
+.journey__cards div {
     padding: 1rem;
     text-align: center;
 }
 
-.services__cards h4 {
+.journey__cards h4 {
     margin: 0 0 8px;
     font-size: 1.7rem;
     color: #a9e4ee;
 }
 
-.services__cards img {
+.journey__cards img {
     width: 8rem;
     height: auto;
 }
@@ -197,17 +197,43 @@ button:hover {
     font-size: 1.2rem;
 }
 
-.questions {
+.projects {
     padding: 4rem 3rem;
     display: flex;
     justify-content: center;
 }
 
-.questions__faq {
+.projects__list {
     width: 50%;
     font-size: 3rem;
     line-height: 0.9;
     color: #a9e4ee;
+}
+
+.period {
+    font-size: 1rem;
+}
+
+.enterprise {
+    font-size: 1rem;
+    color: #fd1d75;
+    margin: 0.8rem;
+}
+
+.box {
+    background: linear-gradient(
+        135deg,
+        rgba(0, 123, 255, 0.25),
+        rgba(0, 180, 255, 0.10)
+    );
+    backdrop-filter: blur(20px); 
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+}
+
+.box p {
+    text-align: left;
 }
 
 #faq {
@@ -265,18 +291,6 @@ footer {
     text-align: center;
     padding: 2rem 1rem;
     background: linear-gradient(to right, #fda7e2, #3ecdef, #5479f7);
-}
-
-#social a {
-    padding: 0 1rem;
-    color: #FFF;
-    text-decoration: none;
-}
-
-#social a img {
-    width: 2rem;
-    height: auto;
-    margin-top: 0.5rem;
 }
 
 /* Fonts */
@@ -426,11 +440,11 @@ footer {
 }
 
 @media (max-width: 800px) {
-    .services h2 {
+    .journey__container h2 {
         font-size: 1.5rem;
     }
 
-    .services__cards {
+    .journey__cards {
         grid-template-columns: repeat(1, 1fr);
     }
 
