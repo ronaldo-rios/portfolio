@@ -261,13 +261,7 @@ button:hover {
     text-align: left;
 }
 
-#faq {
-    padding-left: 4rem;
-    display: flex;
-    flex-direction: column;
-}
-
-#faq h3 {
+#project__item h3 {
     font-size: 2rem;
     padding: 1rem 0;
 }
@@ -437,17 +431,8 @@ footer {
         flex-direction: column;
     }
 
-    .questions__faq {
-        font-size: 2rem;
-    }
-
-    #faq {
+    #project__item {
         padding-left: 0;
-    }
-
-    .questions__faq img {
-        width: 20rem;
-        height: auto;
     }
 
     .hero {
