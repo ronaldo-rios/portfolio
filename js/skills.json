@@ -4,17 +4,17 @@
     "color": "#172845",
     "skills": [
         "HTML", "CSS", "JavaScript", 
-        "Typescript", "React", "Next", 
-        "Tailwind", "ShadcnUI", "Figma"
+        "Typescript", "Vue", "React", "Next", 
+        "Tailwind", "Figma"
     ]
   },
   {
     "category": "Back-End",
     "color": "#172845",
     "skills": [
-        "PHP", "Python", "Node.js", "Laravel", 
-        "Symfony", "Express", "Nest JS", 
-        "Slim Framework", "Prisma", "Doctrine", 
+        "PHP", "Laravel", "Symfony", 
+        "Slim Framework", "Java", 
+        "Node.js", "Express", "Prisma", "Doctrine", 
         "Eloquent", "Testes Automatizados"
     ]
   },

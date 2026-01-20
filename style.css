@@ -13,7 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: radial-gradient(circle at top left, #1e0891, #001a65, #000000);
+    background: radial-gradient(circle at top left, #11253d, #142F39, #000000);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
 }
@@ -44,7 +44,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #fd1d75;
+    color: #ba974c;
     font-weight: 500;
 }
 
@@ -69,27 +69,27 @@ main {
 }
 
 h1 {
-    color: #fd1d75;
+    color: #f5d997;
     font-size: 5rem;
 }
 
 button {
     color: #FFF;
-    background-color: #fd1d75;
+    background-color: #ba974c;
     border-radius: 2rem;
     transition: 0.3s ease;
-    box-shadow: 0 0 4px #fd1d75,
-                0 0 8px #fd1d75;
+    box-shadow: 0 0 4px #f5d997,
+                0 0 8px #f5d997;
 }
 
 button:hover {
     cursor: pointer;
-    background-color: #b3285f;
+    background-color: #896f37;
     color: #FFF;
     transition-duration: 0.5s;
-    box-shadow: 0 0 6px #ff4da6,
-                0 0 12px #ff4da6,
-                0 0 20px #ff4da6;
+    box-shadow: 0 0 6px #ba974c,
+                0 0 12px #ba974c,
+                0 0 20px #ba974c;
     transform: scale(1.03);
 }
 
@@ -105,7 +105,7 @@ button:hover {
 }
 
 .hero__content h2 {
-    color: #a9e4ee;
+    color: #F7E8C3;
     padding: 0.5rem 0;
     font-size: 2rem;
 }
@@ -135,7 +135,7 @@ button:hover {
     flex-direction: column;
     align-items: center;
     padding: 2rem 5rem;
-    background: linear-gradient(to right, #3ecdef, #2fa4d6, #1283f5);
+    background: linear-gradient(to right, #adf1f7, #6ba9b0, #36666b);
     color: #000;
 }
 
@@ -231,7 +231,7 @@ button:hover {
     top: 0;
     width: 3px;
     height: 100%;
-    background: linear-gradient(to bottom, #fd1d75, #2ebbee);
+    background: linear-gradient(to bottom, #f5d997, #705c0c);
     transition: 0.4s ease;
 }
 
@@ -247,7 +247,7 @@ button:hover {
     top: 10px;
     width: 14px;
     height: 14px;
-    background: #fd1d75;
+    background: #ba974c;
     border: 0.1rem solid white;
     border-radius: 50%;
     transition: 0.4s ease;
@@ -288,7 +288,7 @@ button:hover {
 
 .enterprise {
     font-size: 1rem;
-    color: #fd1d75;
+    color: #ba974c;
     margin: 0.8rem;
 }
 
@@ -332,7 +332,7 @@ hr {
 
 .cta__content h3 {
     font-size: 2rem;
-    color: #a9e4ee;
+    color: #F7E8C3;
     margin-left: 1rem;
 }
 
@@ -356,7 +356,7 @@ footer {
     color: #FFF;
     text-align: center;
     padding: 2rem 1rem;
-    background: linear-gradient(to right, #fda7e2, #3ecdef, #5479f7);
+    background: linear-gradient(to right, #adf1f7, #4a8288, #36666b);
 }
 
 /* Fonts */
@@ -589,7 +589,7 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #001a65;
+        background-color: #11253d;
     }
 
     .active,
