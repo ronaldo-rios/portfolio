@@ -111,6 +111,7 @@ button:hover {
 }
 
 .hero__buttons {
+    display: flex;
     flex-wrap: wrap; 
     gap: 0.8rem;      
     margin-top: 1rem;

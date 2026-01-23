@@ -13,9 +13,9 @@
     "color": "#172845",
     "skills": [
         "PHP", "Laravel", "Symfony", 
-        "Slim Framework", "Java", "Python",
-        "Node.js", "Prisma", "Doctrine", 
-        "Eloquent", "Testes Automatizados"
+        "Slim Framework", "Doctrine", "Eloquent", 
+        "Python", "Java", "Hibernate", "JPA",
+        "Spring", "Testes Automatizados"
     ]
   },
   {
