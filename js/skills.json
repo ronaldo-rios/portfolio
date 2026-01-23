@@ -13,8 +13,8 @@
     "color": "#172845",
     "skills": [
         "PHP", "Laravel", "Symfony", 
-        "Slim Framework", "Java", 
-        "Node.js", "Express", "Prisma", "Doctrine", 
+        "Slim Framework", "Java", "Python",
+        "Node.js", "Prisma", "Doctrine", 
         "Eloquent", "Testes Automatizados"
     ]
   },
@@ -24,9 +24,9 @@
     "skills": ["MySQL", "PostgreSQL", "MongoDB", "Redis"]
   },
   {
-    "category": "DevOps",
+    "category": "DevOps & Cloud",
     "color": "#172845",
-    "skills": ["Docker", "Linux", "Git", "CI/CD", "AWS EC2", "AWS S3"]
+    "skills": ["Docker", "Linux", "Git", "CI/CD", "AWS EC2", "AWS S3", "AWS RDS"]
   },
   {
     "category": "Arquitetura & Boas Práticas",
