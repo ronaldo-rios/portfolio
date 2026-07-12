@@ -4,7 +4,7 @@
     "color": "#172845",
     "skills": [
         "HTML", "CSS", "JavaScript", 
-        "Typescript", "Vue", "React", "Next", 
+        "Typescript", "React", "Next", 
         "Tailwind", "Figma"
     ]
   },
@@ -31,6 +31,6 @@
   {
     "category": "Arquitetura & Boas Práticas",
     "color": "#172845",
-    "skills": ["SOLID", "MVC", "Clean Arch", "Microservices", "Design Patterns", "TDD", "Ports and Adapters"]
+    "skills": ["SOLID", "MVC", "Clean Arch", "Microservices", "Design Patterns", "TDD", "Ports and Adapters", "Spec-Driven Development"]
   }
 ]
