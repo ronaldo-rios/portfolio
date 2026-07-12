@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Ronaldo Rios</title>
 </head>
 
@@ -22,7 +24,7 @@
                 <div class="bar__three"></div>
             </div>
             <nav>
-                <ul class="tomorrow-regular">
+                <ul class="nav-regular">
                     <li><a href="#hero">HOME</a></li>
                     <li><a href="#about">SOBRE</a></li>
                     <li><a href="#journey">TRAJETÓRIA</a></li>
@@ -36,12 +38,18 @@
     <main>
         <section class="hero" id="hero">
             <div class="hero__atmosphere" aria-hidden="true">
+                <div class="hero__sky"></div>
+                <div class="hero__moon"></div>
                 <div class="hero__stars"></div>
                 <div class="hero__aurora"></div>
-                <div class="hero__horizon"></div>
+                <div class="hero__cloud hero__cloud--one"></div>
+                <div class="hero__cloud hero__cloud--two"></div>
+                <div class="hero__cloud hero__cloud--three"></div>
+                <div class="hero__snowfield"></div>
+                <div class="hero__grain"></div>
             </div>
             <div class="hero__content">
-                <h1 class="tomorrow-bold">RONALDO RIOS</h1>
+                <h1 class="title-display">RONALDO RIOS</h1>
                 <h2>DESENVOLVEDOR FULL STACK</h2>
                 <h3 class="poppins-medium">Eu crio soluções digitais que vendem, encantam e simplificam!</h3>
                 <div class="hero__buttons">
@@ -68,12 +76,13 @@
             <!-- <img src="./img/business.png" alt="Business"> -->
         </section>
         <section class="about" id="about">
+            <div class="about__sky" aria-hidden="true"></div>
             <div class="about__content">
                 <div class="about__text">
                     <p class="poppins-medium">
                         Sou <strong>Ronaldo Rios</strong>, desenvolvedor de sistemas e consultor de tecnologia com mais de
                         4 anos de experiência em desenvolvimento web. Tenho uma mente
-                        inquieta e curiosa — acredito que inovação nasce da busca constante por
+                        inquieta e curiosa. Acredito que inovação nasce da busca constante por
                         aprendizado e melhoria. 
                         Atualmente estudo Sistemas de Informação na Universidade do Vale do Rio dos Sinos.
                         Meu propósito é entregar solução para empresas exigentes que buscam algo único,
@@ -85,8 +94,9 @@
             <div id="skills__container" class="skills__wrapper"></div>
         </section>
         <section class="journey__container" id="journey">
-            <h2 class="poppins-medium">
-                Coordenadas da trajetória
+            <div class="journey__sky" aria-hidden="true"></div>
+            <h2 class="poppins-medium section-title">
+                Minha Trajetória
             </h2>
             <div class="journey__timeline">
                 <div class="journey__item">
@@ -202,6 +212,7 @@
             </div>
         </section> -->
         <section class="cta" id="cta">
+            <div class="cta__sky" aria-hidden="true"></div>
             <div class="cta__content">
                 <h3 class="poppins-medium">Você pode me encontrar por aqui:</h3>
                 <a href="https://www.linkedin.com/in/ronaldo-rios/" target="_blank">
@@ -237,5 +248,6 @@
 <script src="./js/menu.js"></script>
 <script src="./js/mail.js"></script>
 <script src="./js/skills.js"></script>
+<script src="./js/atmosphere.js"></script>
 
 </html>
