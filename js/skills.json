@@ -1,7 +1,7 @@
 [
   {
     "category": "Front-End",
-    "color": "#172845",
+    "color": "transparent",
     "skills": [
         "HTML", "CSS", "JavaScript", 
         "Typescript", "React", "Next", 
@@ -10,7 +10,7 @@
   },
   {
     "category": "Back-End",
-    "color": "#172845",
+    "color": "transparent",
     "skills": [
         "PHP", "Laravel", "Symfony", 
         "Slim Framework", "Doctrine", "Eloquent", 
@@ -20,17 +20,17 @@
   },
   {
     "category": "Banco de Dados",
-    "color": "#172845",
+    "color": "transparent",
     "skills": ["MySQL", "PostgreSQL", "MongoDB", "Redis"]
   },
   {
     "category": "DevOps & Cloud",
-    "color": "#172845",
+    "color": "transparent",
     "skills": ["Docker", "Linux", "Git", "CI/CD", "AWS EC2", "AWS S3", "AWS RDS"]
   },
   {
     "category": "Arquitetura & Boas Práticas",
-    "color": "#172845",
+    "color": "transparent",
     "skills": ["SOLID", "MVC", "Clean Arch", "Microservices", "Design Patterns", "TDD", "Ports and Adapters", "Spec-Driven Development"]
   }
 ]
