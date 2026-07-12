@@ -22,40 +22,34 @@
         return { ctx, width: rect.width, height: rect.height };
     }
 
-    /* Nevasca global */
-    function initSnow() {
-        const canvas = createCanvas(document.body, "fx-canvas fx-canvas--snow");
-        const count = isMobile ? 60 : 140;
-        const flakes = [];
+    /* Nevasca por seção */
+    function initSectionSnow(selector, count) {
+        const container = document.querySelector(selector);
+        if (!container) return;
 
-        for (let i = 0; i < count; i++) {
-            flakes.push({
-                x: Math.random(),
-                y: Math.random(),
-                r: Math.random() * 2.2 + 0.6,
-                speed: Math.random() * 0.6 + 0.3,
-                drift: Math.random() * 0.4 - 0.2,
-                opacity: Math.random() * 0.5 + 0.2,
-            });
-        }
+        const canvas = createCanvas(container, "fx-canvas fx-canvas--snow");
+        const flakes = Array.from({ length: count }, () => ({
+            x: Math.random(),
+            y: Math.random(),
+            r: Math.random() * 2 + 0.6,
+            speed: Math.random() * 0.7 + 0.3,
+            wind: Math.random() * 0.3 - 0.15,
+            opacity: Math.random() * 0.5 + 0.2,
+        }));
 
         function draw() {
-            const w = window.innerWidth;
-            const h = window.innerHeight;
-            canvas.width = w;
-            canvas.height = h;
-            const ctx = canvas.getContext("2d");
-            ctx.clearRect(0, 0, w, h);
+            const { ctx, width, height } = resizeCanvas(canvas, container);
+            ctx.clearRect(0, 0, width, height);
 
             flakes.forEach(f => {
-                f.y += f.speed / h;
-                f.x += f.drift / w;
+                f.y += f.speed / height;
+                f.x += f.wind / width;
                 if (f.y > 1) { f.y = 0; f.x = Math.random(); }
                 if (f.x > 1) f.x = 0;
                 if (f.x < 0) f.x = 1;
 
                 ctx.beginPath();
-                ctx.arc(f.x * w, f.y * h, f.r, 0, Math.PI * 2);
+                ctx.arc(f.x * width, f.y * height, f.r, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(220, 235, 245, ${f.opacity})`;
                 ctx.fill();
             });
@@ -64,9 +58,9 @@
         }
 
         draw();
+        window.addEventListener("resize", () => resizeCanvas(canvas, container));
     }
 
-    /* Campo de estrelas (hero + cta) */
     function initStarField(sectionSelector, density = 1) {
         const section = document.querySelector(sectionSelector);
         if (!section) return;
@@ -107,7 +101,6 @@
         window.addEventListener("resize", () => resizeCanvas(canvas, section));
     }
 
-    /* Ondas de água (seção sobre) */
     function initWater() {
         const section = document.querySelector("#about");
         if (!section) return;
@@ -149,12 +142,11 @@
         window.addEventListener("resize", () => resizeCanvas(canvas, section));
     }
 
-    /* Aurora reativa ao mouse no hero */
     function initAuroraParallax() {
         const aurora = document.querySelector(".hero__aurora");
-        if (!aurora) return;
-
         const hero = document.querySelector("#hero");
+        if (!aurora || !hero) return;
+
         hero.addEventListener("mousemove", (e) => {
             const rect = hero.getBoundingClientRect();
             const x = (e.clientX - rect.left) / rect.width - 0.5;
@@ -167,52 +159,13 @@
         });
     }
 
-    /* Partículas de neve leve no hero */
-    function initHeroSnow() {
-        const container = document.querySelector(".hero__atmosphere");
-        if (!container) return;
-
-        const canvas = createCanvas(container, "fx-canvas fx-canvas--hero-snow");
-        const count = isMobile ? 35 : 70;
-        const flakes = Array.from({ length: count }, () => ({
-            x: Math.random(),
-            y: Math.random(),
-            r: Math.random() * 2 + 0.8,
-            speed: Math.random() * 0.8 + 0.4,
-            wind: Math.random() * 0.3 - 0.15,
-            opacity: Math.random() * 0.6 + 0.3,
-        }));
-
-        function draw() {
-            const { ctx, width, height } = resizeCanvas(canvas, container);
-            ctx.clearRect(0, 0, width, height);
-
-            flakes.forEach(f => {
-                f.y += f.speed / height;
-                f.x += f.wind / width;
-                if (f.y > 1) { f.y = 0; f.x = Math.random(); }
-                if (f.x > 1) f.x = 0;
-                if (f.x < 0) f.x = 1;
-
-                ctx.beginPath();
-                ctx.arc(f.x * width, f.y * height, f.r, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(230, 245, 255, ${f.opacity})`;
-                ctx.fill();
-            });
-
-            requestAnimationFrame(draw);
-        }
-
-        draw();
-        window.addEventListener("resize", () => resizeCanvas(canvas, container));
-    }
-
     if (prefersReducedMotion) return;
 
-    initSnow();
+    initSectionSnow(".hero__atmosphere", isMobile ? 35 : 70);
+    initSectionSnow("#cta", isMobile ? 25 : 50);
+    initSectionSnow("footer", isMobile ? 15 : 30);
     initStarField("#hero");
     initStarField("#cta", 0.6);
     initWater();
     initAuroraParallax();
-    initHeroSnow();
 })();
