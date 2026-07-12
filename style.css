@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Tomorrow:wght@400;500;600;700&display=swap');
 
 :root {
     --sky-deep: #0A1220;
@@ -9,6 +9,7 @@
     --cream-warm: #E8D8C0;
     --snow: #E8F0F8;
     --snow-blue: #A8C8E0;
+    --ice-bright: #7EC8E3;
     --ice-soft: #7EB0CC;
     --ice-mist: #5A90B0;
     --aurora-mint: rgba(100, 200, 170, 0.2);
@@ -98,21 +99,22 @@ nav ul {
 }
 
 nav ul li a {
-    padding: 0.75rem 1.25rem;
+    padding: 1rem;
     cursor: pointer;
     text-decoration: none;
-    color: var(--cream);
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    border-radius: 2rem;
-    transition: background 0.4s ease, color 0.3s ease, transform 0.3s ease;
+    color: #FFF;
+    font-family: "Tomorrow", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: var(--snow-blue);
-    background: rgba(140, 190, 220, 0.1);
-    text-shadow: 0 0 12px rgba(126, 200, 227, 0.4);
-    transform: translateY(-2px);
+    color: var(--ice-bright);
+    text-shadow:
+        0 0 8px rgba(126, 200, 227, 0.6),
+        0 0 16px rgba(126, 200, 227, 0.35);
+    font-weight: 500;
 }
 
 .toggle {
@@ -673,7 +675,10 @@ footer > div {
 }
 
 /* Font utilities */
-.nav-regular,
+.nav-regular {
+    font-family: "Tomorrow", sans-serif;
+}
+
 .title-display {
     font-family: "M PLUS Rounded 1c", sans-serif;
 }
@@ -858,7 +863,17 @@ footer > div {
         font-size: 1.6rem;
         line-height: 3.5rem;
         display: block;
-        color: var(--cream);
+        color: #FFF;
+        font-family: "Tomorrow", sans-serif;
+        letter-spacing: 0.08em;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .active nav ul a:hover {
+        color: var(--ice-bright);
+        text-shadow:
+            0 0 10px rgba(126, 200, 227, 0.6),
+            0 0 20px rgba(126, 200, 227, 0.35);
     }
 
     .title-display,
